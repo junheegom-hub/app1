@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼 테스트</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        button {
+            font-size: 28px;
+            font-weight: 700;
+            padding: 25px 40px;
+            border-radius: 16px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="testButton" onclick="pressButton()">
+        버튼을 눌러주세요.
+    </button>
+    <script>
+        let pressed = false;
+        function pressButton() {
+            const button = document.getElementById("testButton");
+            if (pressed) {
+                button.textContent = "버튼을 눌러주세요.";
+            } else {
+                button.textContent = "버튼이 눌렸습니다.";
+            }
+            pressed = !pressed;
+        }
+    </script>
+</body>
+</html>
